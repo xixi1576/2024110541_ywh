@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">书籍信息管理</string>
+    <string name="app_name">杨文辉2024110541</string>
 
     <!-- 第一个 Activity 的标题：姓名 + 学号 -->
-    <string name="title_main">ywh2024110541</string>
+    <string name="title_main">杨文辉2024110541</string>
     <string name="title_detail">书籍详情</string>
+    <string name="title_game">翻牌游戏</string>
 
     <string name="header_format">共 %1$d 本图书 · 已按价格从低到高排序</string>
     <string name="item_meta_format">%1$s · %2$s</string>
@@ -15,4 +16,47 @@
     <string name="label_publish_date">出版日期</string>
     <string name="label_isbn">ISBN</string>
     <string name="label_summary">内容简介</string>
+
+    <!-- 菜单项 -->
+    <string name="menu_game">翻牌游戏</string>
+    <string name="menu_about">关于</string>
+    <string name="menu_reset">重新开始</string>
+    <string name="menu_overflow_symbol">⋮</string>
+    <string name="menu_desc">菜单</string>
+
+    <!-- 关于对话框 -->
+    <string name="student_name">杨文辉</string>
+    <string name="student_id">2024110541</string>
+    <string name="teacher_name">李贵洋</string>
+    <string name="about_title">关于本应用</string>
+    <string name="about_message_format">Android 移动应用开发 实验五\nRecyclerView 翻牌游戏\n\n姓名：%1$s\n学号：%2$s\n指导老师：%3$s\n\n玩法：每轮最多翻开三张牌，\n三张点数相同的牌即可配对成功。</string>
+    <string name="about_positive">确定</string>
+
+    <!-- 游戏界面 -->
+    <string name="score_format">得分：%1$d</string>
+    <string name="flip_count_format">翻牌：%1$d 次</string>
+    <string name="game_hint">三张点数相同的牌即可配对：配对成功 +12 分，配对失败 -2 分，每翻开一张牌 -1 分</string>
+    <string name="card_back_symbol">?</string>
+    <string name="card_content_description">翻牌卡片</string>
+    <string name="win_title">全部配对完成</string>
+    <string name="win_message_format">恭喜！%1$d 组牌全部配对成功，\n共翻牌 %2$d 次，最终得分 %3$d 分。</string>
+    <string name="win_positive">再来一局</string>
+
+    <!-- 卡片内容：点数与花色均来自资源，避免代码／布局直接写死字符串 -->
+    <string-array name="card_ranks">
+        <item>A</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="card_suits">
+        <item>♠</item>
+        <item>♥</item>
+        <item>♦</item>
+    </string-array>
 </resources>

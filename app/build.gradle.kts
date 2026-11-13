@@ -21,3 +21,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
+
+dependencies {
+    // RecyclerView：实验五翻牌游戏使用的列表控件
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+}

@@ -5,12 +5,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- 标题：姓名 + 学号 -->
-    <LinearLayout style="@style/BookTitleBar">
+    <!-- 标题栏：姓名 + 学号，右侧“⋮”菜单按钮 -->
+    <LinearLayout style="@style/BookTitleBar" android:orientation="horizontal">
 
         <TextView
-            style="@style/BookTitleText"
-            android:text="@string/title_main" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/title_main"
+            android:textColor="@color/text_red"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/button_menu"
+            style="@style/BookMenuButton"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/menu_desc" />
     </LinearLayout>
 
     <TextView

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 翻牌卡片高度：竖屏 3 行，卡片可以高一些 -->
+    <dimen name="card_height">118dp</dimen>
+</resources>

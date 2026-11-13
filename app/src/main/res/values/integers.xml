@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 翻牌游戏：竖屏 4 列 × 3 行 = 12 张牌 -->
+    <integer name="game_columns">4</integer>
+    <integer name="game_card_count">12</integer>
+</resources>

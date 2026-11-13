@@ -3,7 +3,10 @@ package com.example.a2024110541;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -13,7 +16,8 @@ import java.util.Comparator;
  * 第一个 Activity。
  *
  * <p>在代码中创建多本书籍对象放入数组，按价格从低到高排序后用列表展示；
- * 单击某一书籍条目时启动 {@link DetailActivity} 显示其完整信息。</p>
+ * 单击某一书籍条目时启动 {@link DetailActivity} 显示其完整信息。
+ * 标题栏右侧的“⋮”按钮弹出菜单，菜单中包含“翻牌游戏”和“关于”。</p>
  */
 public class MainActivity extends Activity {
 
@@ -25,7 +29,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // ① 按价格从低到高排序
+        // ① 标题栏菜单按钮：弹出“翻牌游戏 / 关于”菜单
+        TextView menuButton = findViewById(R.id.button_menu);
+        menuButton.setOnClickListener(this::showMenu);
+
+        // ② 按价格从低到高排序
         Arrays.sort(books, new Comparator<Book>() {
             @Override
             public int compare(Book first, Book second) {
@@ -33,11 +41,11 @@ public class MainActivity extends Activity {
             }
         });
 
-        // ② 用列表显示书籍
+        // ③ 用列表显示书籍
         ListView bookList = findViewById(R.id.list_books);
         bookList.setAdapter(new BookAdapter(this, books));
 
-        // ③ 单击条目，把选中的书籍对象传给第二个 Activity
+        // ④ 单击条目，把选中的书籍对象传给第二个 Activity
         bookList.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
             intent.putExtra(DetailActivity.EXTRA_BOOK, books[position]);
@@ -46,6 +54,32 @@ public class MainActivity extends Activity {
 
         TextView header = findViewById(R.id.text_header);
         header.setText(getString(R.string.header_format, books.length));
+    }
+
+    /**
+     * 显示标题栏菜单。菜单内容来自 {@code res/menu/menu_main.xml}。
+     *
+     * @param anchor 菜单的锚点视图（标题栏右侧按钮）
+     */
+    private void showMenu(View anchor) {
+        PopupMenu popupMenu = new PopupMenu(this, anchor);
+        popupMenu.getMenuInflater().inflate(R.menu.menu_main, popupMenu.getMenu());
+        popupMenu.setOnMenuItemClickListener(this::onOptionsItemSelected);
+        popupMenu.show();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int itemId = item.getItemId();
+        if (itemId == R.id.action_game) {
+            startActivity(new Intent(this, GameActivity.class));
+            return true;
+        }
+        if (itemId == R.id.action_about) {
+            AboutDialog.show(this);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /**
