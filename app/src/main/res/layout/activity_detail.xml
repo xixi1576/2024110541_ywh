@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/BookTitleBar">
+
+        <TextView
+            style="@style/BookTitleText"
+            android:text="@string/title_detail" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/text_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/text_red"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="Android第一行代码（第3版）" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/BookDetailLabel"
+                    android:text="@string/label_book_name" />
+
+                <TextView
+                    android:id="@+id/text_detail_name"
+                    style="@style/BookDetailValue"
+                    tools:text="Android第一行代码（第3版）" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/BookDetailLabel"
+                    android:text="@string/label_author" />
+
+                <TextView
+                    android:id="@+id/text_detail_author"
+                    style="@style/BookDetailValue"
+                    tools:text="郭霖" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/BookDetailLabel"
+                    android:text="@string/label_publisher" />
+
+                <TextView
+                    android:id="@+id/text_detail_publisher"
+                    style="@style/BookDetailValue"
+                    tools:text="人民邮电出版社" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/BookDetailLabel"
+                    android:text="@string/label_price" />
+
+                <TextView
+                    android:id="@+id/text_detail_price"
+                    style="@style/BookDetailValue"
+                    tools:text="￥89.00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/BookDetailLabel"
+                    android:text="@string/label_publish_date" />
+
+                <TextView
+                    android:id="@+id/text_detail_date"
+                    style="@style/BookDetailValue"
+                    tools:text="2020-04" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/BookDetailLabel"
+                    android:text="@string/label_isbn" />
+
+                <TextView
+                    android:id="@+id/text_detail_isbn"
+                    style="@style/BookDetailValue"
+                    tools:text="9787115529648" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"
+                android:text="@string/label_summary"
+                android:textColor="@color/text_red"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_detail_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/text_red"
+                android:textSize="15sp"
+                tools:text="从零开始讲解 Android 应用开发，涵盖四大组件、UI、网络与数据存储。" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

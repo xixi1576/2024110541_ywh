@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 全 App 统一使用的文字颜色：红色 -->
+    <color name="text_red">#FFFF0000</color>
+    <color name="red_primary">#FFD32F2F</color>
+    <color name="bar_bg">#FFFFFFFF</color>
+    <color name="page_bg">#FFFFF6F6</color>
+    <color name="divider">#FFF0D0D0</color>
+    <color name="item_pressed">#FFFFE0E0</color>
+    <color name="badge_bg">#FFFFEBEE</color>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 应用主题：无系统标题栏（标题栏由布局自绘），所有文字默认为红色 -->
+    <style name="Theme.BookInfo" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:colorAccent">@color/red_primary</item>
+        <item name="android:textColorPrimary">@color/text_red</item>
+        <item name="android:textColorSecondary">@color/text_red</item>
+        <item name="android:textColor">@color/text_red</item>
+        <item name="android:windowBackground">@color/page_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- 顶部标题栏容器：由 fitsSystemWindows 让白底覆盖状态栏区域 -->
+    <style name="BookTitleBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/bar_bg</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- 顶部标题栏文字 -->
+    <style name="BookTitleText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textColor">@color/text_red</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 详情页左侧标签 -->
+    <style name="BookDetailLabel">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_red</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 详情页右侧内容 -->
+    <style name="BookDetailValue">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/text_red</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+</resources>
